@@ -7,12 +7,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24077e52-401c-4cbf-a218-91d8af6ce15c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/_01_moving_ownership.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_02_reading_lines.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_03_immutable_borrows.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_04_mutable_borrows.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/_05_exploring_read_line_result.rs" afterDir="false" />
+    <list default="true" id="24077e52-401c-4cbf-a218-91d8af6ce15c" name="Changes" comment="adding basic integer types demonstration">
+      <change afterPath="$PROJECT_DIR$/src/_07_basic_operators.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/_08_variable_scope_and_shadowing.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_data_types.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_data_types.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +43,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -91,8 +92,16 @@
       <option name="presentableId" value="Default" />
       <updated>1640441913098</updated>
       <workItem from="1640441914699" duration="41000" />
-      <workItem from="1640441986233" duration="1825000" />
+      <workItem from="1640441986233" duration="4941000" />
     </task>
+    <task id="LOCAL-00001" summary="adding basic integer types demonstration">
+      <created>1640444285188</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640444285188</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +117,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adding basic integer types demonstration" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding basic integer types demonstration" />
   </component>
 </project>

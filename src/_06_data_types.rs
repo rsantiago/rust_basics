@@ -17,5 +17,22 @@ pub fn basic_data_types() {
     let _default_cpu_unsigned: usize ;
     let default_cpu_signed: isize = 12;
 
-    println!("how many bits does this cpu have? {}bits", size_of_val(&default_cpu_signed)*8)
+    println!("how many bits does this cpu have? {}bits", size_of_val(&default_cpu_signed)*8);
+
+    // char types
+    let my_char : char = 'x';
+
+    println!("how many bytes does a char have? {}bytes", size_of_val(&my_char));
+
+    // floating point
+
+    let _float_32bits: f32;
+    let _float_64bits: f64;
+
+    // boolean
+
+    let mut boolean : bool;
+    boolean = false;
+    boolean = true;
+
 }
