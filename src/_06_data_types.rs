@@ -1,5 +1,17 @@
 use std::mem::size_of_val;
 
+struct MyCustomType {
+    custom_number:i32,
+    custom_other_number:i128
+}
+
+enum SeasonsEnumerationType {
+    SUMMER,
+    AUTUMN,
+    WINTER,
+    SPRING
+}
+
 pub fn basic_data_types() {
     // all int types
     let _unsigned_integer_8bits : u8;
@@ -35,4 +47,19 @@ pub fn basic_data_types() {
     boolean = false;
     boolean = true;
 
+    let my_custom_type_variable_allocated_on_stack = MyCustomType {
+        custom_number: 123,
+        custom_other_number: 345
+    };
+
+    let my_custom_type_variable_boxed_on_heap = Box::new(MyCustomType{
+            custom_number: 0,
+            custom_other_number: 0
+        });
+
+    let my_custom_type_variable_unboxed = *my_custom_type_variable_boxed_on_heap;
+
+    let season = SeasonsEnumerationType::WINTER;
+
+    println!("everything is declared.")
 }
