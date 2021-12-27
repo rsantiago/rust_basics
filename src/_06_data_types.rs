@@ -87,6 +87,10 @@ fn enums() {
     let screwed_season = SeasonsEnumerationType::SCREWED('a');
     let weird_season = SeasonsEnumerationType::WEIRD { code: 4, subcode: 3 } ;
 
+    let matchResult = match weird_season {
+        SeasonsEnumerationType::WEIRD {code: 4, ..} => "I don't care for the subcode",
+        _ => "whatever"
+    };
 }
 
 fn unions() {

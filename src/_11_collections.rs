@@ -1,7 +1,29 @@
 pub fn collections() {
-    simple_arrays();
-    multi_dimensional_arrays();
-    slices();
+    // simple_arrays();
+    // multi_dimensional_arrays();
+    // slices();
+    tuples();
+}
+
+fn tuples() {
+    let my_simple_tuple = get_a_simple_tuple(3, 5, 7);
+    println!("my simple tuple {0}, {1}, {2}, {0}, {1}, {2}", my_simple_tuple.0, my_simple_tuple.1, my_simple_tuple.2);
+
+    let (a_destructured, b_destructured, c_destructured) = my_simple_tuple;
+
+    let another_simple_tuple = get_a_simple_tuple(1,2,5);
+    let tuple_of_tuples = (my_simple_tuple, another_simple_tuple);
+    println!("Tuple of tuples: {:?}", tuple_of_tuples);
+    println!("Accessing elements from combined tuples: {0}, {1}", (tuple_of_tuples.0).0, (tuple_of_tuples.1).0);
+
+    let ((a, b, c),(d, e, f)) = tuple_of_tuples; // destructuring a combined tuple
+    let tuples_can_have_many_different_types = ('a', "test", 32, true);
+    let single_element_tuple = (32);
+    let another_single_element_tuple = (43, );
+}
+
+fn get_a_simple_tuple(a: isize, b:isize, c:isize) -> (isize, isize, isize) {
+    (a+2, b+4, c+ 9)
 }
 
 fn slices() {

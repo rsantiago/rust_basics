@@ -33,10 +33,18 @@ pub fn control_flow() {
     let my_integer = 32;
     let my_match = match my_integer {
         30 => "hey",
+        named_match @ 20 => "that was a named match",
+        _ if my_integer %2 ==0 => "that was a conditioned match",
         40 => "ho",
         41..=50 => "lets",
         _ => "go"
     };
 
+    let a_tuple = (2,3);
+    let match_result = match a_tuple {
+        (0,0) => "in case the tuple is 0,0",
+        (0, y) => "in case the first element is 0, and the other is ",
+        (x, y) => "exausting the options by creating variables"
+    };
 
 }
