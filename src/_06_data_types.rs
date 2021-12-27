@@ -9,8 +9,21 @@ pub fn basic_data_types() {
     enums();
     unions();
     options();
+    generics();
 
     println!("everything is declared.")
+}
+
+fn generics() {
+    struct Coordinates<T> {
+        x: T,
+        y: T
+    }
+
+    let int_coordinate: Coordinates<u16> = Coordinates{ x:3, y:4};
+    let string_slice_coord = Coordinates{x:"mycoord", y: "anothercoord"};
+    let i16_coord = Coordinates{x: 3i16, y: 6i16};
+    let fisize_coord = Coordinates{x: 1f32, y: 2f32};
 }
 
 fn booleans() {

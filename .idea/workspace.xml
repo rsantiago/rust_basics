@@ -12,11 +12,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24077e52-401c-4cbf-a218-91d8af6ce15c" name="Changes" comment="adding slices and reorganizing some stuff">
+    <list default="true" id="24077e52-401c-4cbf-a218-91d8af6ce15c" name="Changes" comment="more pattern matching stuff">
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_10_control_flow.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_10_control_flow.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_11_collections.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_collections.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_data_types.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_data_types.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +136,7 @@
       <workItem from="1640441986233" duration="7495000" />
       <workItem from="1640484535153" duration="232000" />
       <workItem from="1640484820679" duration="58000" />
-      <workItem from="1640484916707" duration="16615000" />
+      <workItem from="1640484916707" duration="17713000" />
     </task>
     <task id="LOCAL-00001" summary="adding basic integer types demonstration">
       <created>1640444285188</created>
@@ -167,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640619790859</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="more pattern matching stuff">
+      <created>1640624839377</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640624839377</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +195,8 @@
     <MESSAGE value="adding variable scope and shadowing" />
     <MESSAGE value="adding const, control flow and some extra data types" />
     <MESSAGE value="adding slices and reorganizing some stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding slices and reorganizing some stuff" />
+    <MESSAGE value="more pattern matching stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="more pattern matching stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,12 +213,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_06_data_types.rs</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_06_data_types.rs</url>
-          <line>12</line>
+          <line>13</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
