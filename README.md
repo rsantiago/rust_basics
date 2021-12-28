@@ -1,6 +1,8 @@
 # RUST BASICS
 
-This is a project that demonstrates most of the essential rust notation, as well as some of the most important concepts regarding ownership and borrowing, which makes the rust language one of the most interesting and intriguing programming languages lately.
+This is a project that demonstrates most of the essential rust notation.
+
+There are also code that illustrates some of the most important concepts regarding ownership and borrowing, which makes the rust language one of the most interesting and intriguing programming languages lately.
 
 I really enjoyed going through all these learnings, but I must confess that rust lang makes me a little dizzy sometimes.
 
@@ -22,17 +24,19 @@ Another important thing for choosing what to learn is:
 
 The `main.rs` file calls many functions on the different .rs files in the `src` folder.
 
-You should choose which concept to go through, and add/removing comments accordingly.
+You should choose which concept to go through, and add/removing comments accordingly, so that the main.rs program can call only the parts that you want to learn.
 
 The best way to use this project will be to actually call just one function at a time. 
 
 For example:
 
-In `main.rs`, you could comment all functions, except '`moving_ownership()`'. Therefore, you will execute the ownership concepts part of the code.
+In `main.rs`, you could comment all functions, except '`moving_ownership()`'. Therefore, you will execute the ownership concepts part of the code when running `'cargo run'`.
 
 You should always execute a function and read the code, possibly following with a debugger.
 
-There are code lines that are commented. This is to remind myself that some ways of writing rust is wrong. Do not remove those commented lines if you also want to be reminded!
+### There are also several code lines that are commented.
+
+This is to remind myself that some ways of writing rust is wrong. Do not remove those commented lines if you also want to be reminded!
 
 The IDEs I have used to create this project are Intellij and CLion. Any other IDE will be of use, though.
 
