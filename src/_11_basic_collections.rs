@@ -1,8 +1,115 @@
+use std::borrow::Borrow;
+use std::collections::btree_map::Entry::Occupied;
+use std::collections::HashMap;
+
 pub fn collections() {
     // simple_arrays();
     // multi_dimensional_arrays();
     // slices();
-    tuples();
+    // tuples();
+    // vectors();
+    hashmaps();
+}
+
+fn hashmaps() {
+    let mut a_hashmap = HashMap::new();
+    a_hashmap.insert("test", 35);
+    a_hashmap.insert("another_test", 22);
+
+    for(key, value) in &a_hashmap {
+        println!("key {} value {}", key, value)
+    }
+
+    println!("value for key 'test' is {}", &a_hashmap["test"]);
+    // println!("value for key 'wrong_key' is {} ", &a_hashmap["wrong_key"]); // this will break the program!
+    let mut value = a_hashmap.entry("wrong_entry").or_default();
+    println!("The default value will be zero: {}", value);
+
+    value  = a_hashmap.entry("another_wrong").or_insert(40);
+    println!("The inserted value should be 40 -> {} ", value);
+
+    let mut value_anodah = a_hashmap.entry("anodah").or_default();
+    println!("The value should be 40 again -> {}", value_anodah);
+
+    // println!("The value of value is: {}", value); // cant be done, as the last borrow could have messed up with where the 'value' pointer is referring to
+
+    value = a_hashmap.entry("another_wrong").or_default();
+    println!("The value should be 40 again -> {}", value);
+
+    value  = a_hashmap.entry("another_wrong").or_insert(21);
+    println!("The value should still be 40 -> {}", value);
+
+    match a_hashmap.get("wrong again") {
+        Some(v) => println!("There is value: {}", v),
+        None => println!("No value")
+    }
+
+    let option = a_hashmap.get("wrong yet again");
+    match option {
+        Some(v) => println!("There is value: {}", v),
+        None => println!("No value")
+    }
+
+    // println!("The value of value is {}", value); // cant do this here, because the match statements are immutable borrow
+    /** this is a simple explanation for the problem
+    https://stackoverflow.com/questions/47618823/cannot-borrow-as-mutable-because-it-is-also-borrowed-as-immutable
+
+    The only way to print value is assigning it to another reference, like this, before trying to print it
+
+    let mut integer = 2;
+    value = &mut integer;
+
+    It happens so that value doesnt mess with memory that the first immutable borrow is trying to deal with.
+    Even if you will not use it later, it can't point to some area that might be violated by a mutable borrow.
+    Wow, that is quite interesting.
+
+    **/
+
+    let entry = a_hashmap.entry("another_wrong").or_default();
+    *entry = 10;
+
+    println!("Changed the value of entry to {}", entry);
+
+    // entry = value // cant do this, because entry is immutable
+    value = entry ; // could do this, because value is mutable
+    println!("The value of value is {}", value);
+    println!("The value of entry is {}", entry);
+
+
+}
+
+fn vectors() {
+    let mut my_vector = Vec::new();
+    my_vector.push(1);
+    my_vector.push(2);
+    my_vector.push(3);
+    let mut my_other_vec = my_vector.clone();
+
+    println!("two ways to access the values: {:?} - {:?}", my_vector.get(1), my_vector);
+    println!("one more way {}", my_vector[2]);
+
+    check_vector_index(&my_vector, 11);
+    check_vector_index(&my_vector, 2);
+    check_vector_index(&my_vector, 1);
+
+    for x in &my_vector { println!("Also a way to go through the vector elements: {} ", x) }
+
+    while let Some(y) = my_other_vec.pop() { println!("Found value: {}", y);  }
+
+    loop {
+        match my_vector.pop() {
+            Some(v) => println!("Found a value -> {} ", v),
+            None => break
+        }
+    }
+}
+
+fn check_vector_index(my_vector: &Vec<i32>, index: usize) {
+    match my_vector.get(index) {
+        Some(3) => println!("Found 3!"),
+        Some(v) => println!("Found a value: {}", v),
+        None => println!("no value found")
+    }
 }
 
 fn tuples() {

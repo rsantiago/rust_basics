@@ -8,7 +8,7 @@ mod _07_basic_operators;
 mod _08_variable_scope_and_shadowing;
 mod _09_const_static_unsafe;
 mod _10_control_flow;
-mod _11_collections;
+mod _11_basic_collections;
 
 use crate::_01_moving_ownership::moving_ownership;
 use crate::_02_reading_lines::reading_lines;
@@ -19,7 +19,7 @@ use crate::_06_data_types::basic_data_types;
 use crate::_08_variable_scope_and_shadowing::scope_and_shadowing;
 use crate::_09_const_static_unsafe::const_static_unsafe;
 use crate::_10_control_flow::control_flow;
-use crate::_11_collections::collections;
+use crate::_11_basic_collections::collections;
 
 
 fn main() {
