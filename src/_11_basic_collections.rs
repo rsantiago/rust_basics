@@ -1,14 +1,25 @@
 use std::borrow::Borrow;
 use std::collections::btree_map::Entry::Occupied;
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
+use std::ptr::hash;
 
 pub fn collections() {
     // simple_arrays();
     // multi_dimensional_arrays();
     // slices();
     // tuples();
-    // vectors();
-    hashmaps();
+    //vectors();
+    //hashmaps();
+    //hashsets();
+}
+
+fn hashsets() {
+    let mut hashset = HashSet::new();
+    hashset.insert("test");
+    hashset.insert("another_test");
+
+    let hashset : HashSet<_>= (1..=500).collect();
+    println!("Hashset size is {}", hashset.len());
 }
 
 fn hashmaps() {
@@ -102,6 +113,28 @@ fn vectors() {
             None => break
         }
     }
+
+    let vector_another_build = vec![1, 2, 3, 4];
+    let vector_another_example = vec!["azul", "vermelho", "preto"];
+
+    for x in vector_another_build {
+        println!("value found: {}", x);
+    }
+
+    // println!("vector_another_build_contents: {:?} ", vector_another_build); // this cant be done here, because vector ownership is moved to the for loop
+
+    for y in &vector_another_example { // immutable borrow here
+        println!("value found: {}", y);
+    }
+    println!("Valores do vector_another_example {:?}", vector_another_example); // agora pode
+
+    let mut consolidated_vectors = vec![];
+    consolidated_vectors.extend(vector_another_example);
+    // consolidated_vectors.extend(vector_another_build); // cant do this because the last line establishes another type for the vector
+    println!("consolidated vector {:?}", consolidated_vectors)
+
+    // println("vector_another_example : {:?}", vector_another_example); // this is not possible, since extend() method moved the vector completely (transferred the ownership to the extend method)
+
 }
 
 fn check_vector_index(my_vector: &Vec<i32>, index: usize) {

@@ -1,17 +1,76 @@
 use std::mem::size_of_val;
 
 pub fn basic_data_types() {
-    integers();
-    chars();
-    floats();
-    booleans();
-    structs();
-    enums();
-    unions();
-    options();
-    generics();
-
+     integers();
+    // chars();
+    // floats();
+    // booleans();
+    // structs();
+    // enums();
+    // unions();
+    // options();
+    // generics();
+    string_slices();
+    strings();
     println!("everything is declared.")
+}
+
+fn strings() {
+    let mut strings_live_in_the_heap = String::new();
+    strings_live_in_the_heap.push('a');
+    strings_live_in_the_heap.push_str(" - and i can push a static string slice to this string");
+
+    let mut another_string = String::from("create a string from a static slice");
+
+    let concatenated = another_string + " i want to add this string slice to the string. The first string ownership is moved to this statement and cant be used anymore";
+
+    let two_strings_concatenated = strings_live_in_the_heap + &concatenated
+        + " and both strings are moved. Cant be used anymore";
+
+    println!("{:?}",two_strings_concatenated);
+
+    let string_from_to_string_in_a_slice = "i can call to_string and convert a string slice into a string".to_string();
+
+    // let lets_format_some_strings = "lets {} some {}"; // this can't be used as a template for formatting
+    let format = "format";
+    let strings = "strings";
+    let formatted_string = format!("lets {} some {}", format, strings);
+    println!("{}",formatted_string);
+
+    let (repeat, dont) = ("repeat", "dont");
+    let formatting_with_indexes = format!("{0} {1} {0}", repeat, dont);
+    println!("{}", formatting_with_indexes);
+
+    let (with, parameters) = ("whatever", "u lalala");
+    let formatting_with_names = format!("lets format {with} named {parameters}",
+        with=with, parameters=parameters
+    );
+    println!("{}", formatting_with_names);
+
+    let mixed = format! {"{}, {}, {whatsoever}, {2}, {}",
+                          format, strings, formatted_string, whatsoever = repeat};
+
+    println!("{}", mixed);
+}
+
+fn string_slices() {
+
+    // these are string slices:
+    
+    let static_string: &'static str = "this string will exist throughout the program lifetime";
+    let this_is_also_a_static_string = "this is also a static string";
+    {
+        let this_reference_to_a_static_string_is_not_static = "The string will live in the binary, but the reference will die";
+    }
+    println!("living references: \n{}\n{}", static_string, this_is_also_a_static_string);
+    // println!("This static string is not accessible anymore: {}", this_reference_to_a_static_string_is_not_static);
+
+    // let single_char = static_string[0]; // this is not allowed
+    let single_char = static_string.chars().nth(0);
+    if let Some(c) = single_char { println!("but this is allowed: {}", c); }
+
+    let string_slice_from_a_string: &str = &String::from("It is hard to build a string without a string slice");
+
 }
 
 fn generics() {
@@ -49,6 +108,9 @@ fn chars() {
 }
 
 fn integers() {
+    static STATIC_NUMBER: i32 = 3; // this will live forever while the program is being executed
+
+
     let _unsigned_integer_8bits: u8;
     let _unsigned_integet_16bits: u16;
     let _unsigned_integer_32bits: u32;
@@ -63,6 +125,7 @@ fn integers() {
 
     let _default_cpu_unsigned: usize;
     let default_cpu_signed: isize = 12;
+    let another_way_to_declare_variables = 19 as i128;
 
     println!("how many bits does this cpu have? {}bits", size_of_val(&default_cpu_signed) * 8);
 }

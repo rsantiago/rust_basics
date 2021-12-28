@@ -12,10 +12,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24077e52-401c-4cbf-a218-91d8af6ce15c" name="Changes" comment="adding generics">
+    <list default="true" id="24077e52-401c-4cbf-a218-91d8af6ce15c" name="Changes" comment="adding hashmap stuff">
+      <change afterPath="$PROJECT_DIR$/src/_12_functions_and_methods.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/_11_collections.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_basic_collections.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_06_data_types.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_06_data_types.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/_11_basic_collections.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/_11_basic_collections.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +139,9 @@
       <workItem from="1640441986233" duration="7495000" />
       <workItem from="1640484535153" duration="232000" />
       <workItem from="1640484820679" duration="58000" />
-      <workItem from="1640484916707" duration="25279000" />
+      <workItem from="1640484916707" duration="25440000" />
+      <workItem from="1640651924968" duration="16000" />
+      <workItem from="1640651986645" duration="7919000" />
     </task>
     <task id="LOCAL-00001" summary="adding basic integer types demonstration">
       <created>1640444285188</created>
@@ -181,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640626248314</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="adding hashmap stuff">
+      <created>1640651882244</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1640651882244</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +216,8 @@
     <MESSAGE value="adding slices and reorganizing some stuff" />
     <MESSAGE value="more pattern matching stuff" />
     <MESSAGE value="adding generics" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding generics" />
+    <MESSAGE value="adding hashmap stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding hashmap stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -222,27 +234,27 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_06_data_types.rs</url>
-          <line>14</line>
+          <line>15</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_06_data_types.rs</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_11_basic_collections.rs</url>
-          <line>88</line>
+          <line>99</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_11_basic_collections.rs</url>
-          <line>51</line>
+          <line>62</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/_11_basic_collections.rs</url>
-          <line>43</line>
+          <line>54</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
