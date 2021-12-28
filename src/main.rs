@@ -12,11 +12,13 @@ mod _10_control_flow;
 mod _11_basic_collections;
 mod _12_functions_and_methods;
 
+use crate::_01_moving_ownership::moving_ownership;
+use crate::_10_control_flow::control_flow;
 use crate::_11_basic_collections::collections;
 use crate::_12_functions_and_methods::functions_and_methods;
 
 fn main() {
-    // moving_ownership();
+     moving_ownership();
     // reading_lines();
     // immutable_borrows();
     // mutable_borrows();
@@ -24,7 +26,8 @@ fn main() {
     //basic_data_types();
     // scope_and_shadowing();
     // const_static_unsafe();
-    // control_flow();
+     control_flow();
     //collections();
     functions_and_methods();
+    // next ones: traits
 }

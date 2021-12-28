@@ -26,9 +26,18 @@ pub fn control_flow() {
         continue
     }
 
+    for x in 0.. {
+        if x == 10 { break }
+    }
+
     for(mypos, x) in (10..21).enumerate() {
         println!("{} : {}", mypos, x)
     }
+
+    let last_int: Vec<i32> =
+        (0..).take_while(|x| *x<10)
+            .collect();
+    println!("this is a neat way of doing for too! See the closures samples in this code base. Result is {:?}", last_int );
 
     let my_integer = 32;
     let my_match = match my_integer {

@@ -61,6 +61,13 @@ pub fn moving_ownership() {
     println!("No variable ownerships are taken by the println function, \
              since it is a macro, not a function");
 
+
+    let mut a = 40;
+    let b = &mut a;
+    *b = 2;
+    println!("b= {}", b);
+    println!("a = {}", a);
+
 }
 
 fn steal_ownership(brand_new_owner: String) {

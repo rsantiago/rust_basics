@@ -3,6 +3,37 @@ pub fn functions_and_methods() {
     methods();
     function_references();
     closures();
+    higher_order_functions();
+    
+}
+
+fn higher_order_functions() {
+    let my_function = this_function_returns_a_function();
+    println!("calling my higher order function -> {}", my_function());
+
+    let other_higher_order_function = this_returned_function_receive_ints_and_returns_twice_the_int();
+    println!("testing another higher order function: {}", other_higher_order_function(10));
+    let my_int = 30;
+    println!("testing another higher order function: {}", other_higher_order_function(my_int));
+
+    println!("my int: {}", my_int);
+
+    let my_result : Vec<i32> = (0..)
+        .skip_while(|x| *x<5)
+        .filter(|x|x%2==0)
+        .take_while(|x| *x<30)
+        .collect();
+
+    println!("Result from these crazy closure filters is: {:?}", my_result);
+}
+
+fn this_function_returns_a_function() -> fn() -> isize {
+    || 123
+}
+
+fn this_returned_function_receive_ints_and_returns_twice_the_int()
+    -> impl Fn(isize) -> isize {
+    return |x:isize| { x*2 };
 }
 
 fn closures() {

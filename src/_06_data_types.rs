@@ -6,7 +6,7 @@ pub fn basic_data_types() {
     // floats();
     // booleans();
     // structs();
-    // enums();
+     enums();
     // unions();
     // options();
     // generics();
@@ -156,7 +156,8 @@ fn enums() {
         WINTER,
         SPRING,
         SCREWED(char),
-        WEIRD {code: i32, subcode: i64}
+        WEIRD {code: i32, subcode: i64},
+        MyNumberedSeason = 300
     }
 
     let season = SeasonsEnumerationType::WINTER;
