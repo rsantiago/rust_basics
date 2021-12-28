@@ -23,11 +23,10 @@ fn main() {
     // immutable_borrows();
     // mutable_borrows();
     // exploring_read_line_result();
-    //basic_data_types();
+    // basic_data_types();
     // scope_and_shadowing();
     // const_static_unsafe();
-     control_flow();
-    //collections();
-    functions_and_methods();
-    // next ones: traits
+    // control_flow();
+    // collections();
+    // functions_and_methods();
 }

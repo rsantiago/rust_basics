@@ -150,15 +150,21 @@ fn structs() {
 }
 
 fn enums() {
+
+    enum MyCustomEnum {
+        ThisWillBeA400 =400,
+        ThisWillBeA500 =500
+    }
+
     enum SeasonsEnumerationType {
         SUMMER,
         AUTUMN,
         WINTER,
         SPRING,
         SCREWED(char),
-        WEIRD {code: i32, subcode: i64},
-        MyNumberedSeason = 300
+        WEIRD {code: i32, subcode: i64}
     }
+
 
     let season = SeasonsEnumerationType::WINTER;
     let screwed_season = SeasonsEnumerationType::SCREWED('a');
