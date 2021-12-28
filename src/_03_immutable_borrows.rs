@@ -14,7 +14,7 @@ pub fn immutable_borrows() {
     // (passing a read-only reference to other variables)
     // or you can do another mutable borrow (read-write reference)
 
-    let a_string = String::new(); // immutable reference declared
+    let a_string = String::from("a_string"); // immutable reference declared
 
     // the following is a string slice, immutably borrowed from a string
     // (that is, a read-only pointer to a string)
@@ -42,7 +42,7 @@ pub fn immutable_borrows() {
     // stdin().read_line(&mut _mutable_variable_to_immutable_reference); // because you can't make an immutable reference, mutable
 
     // we will create another string bellow (immutable)
-    let another_immutable_string = String::new();
+    let another_immutable_string = String::from("another immutable string");
 
     // the following is impossible, because it is trying to transfer the whole object ownership
     // to a mutable variable that is a storage to an immutable reference (borrowed) variable

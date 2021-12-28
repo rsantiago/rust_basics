@@ -1,7 +1,7 @@
 use std::io::stdin;
 
 pub fn mutable_borrows() {
-    let mut a_string = String::new("a string");
+    let mut a_string = String::from("a string");
 
     // general idea:
     // there can be only one mutable-borrow at a time,
@@ -41,7 +41,7 @@ pub fn mutable_borrows() {
     //let mutably_borrowing_a_again = &mut a_string; // cant mutably borrow twice or more
 
     let mut another_mutable_string = String::from("another mutable string");
-    let mut yet_another_mutable_string = String::new("yet another mutable string");
+    let mut yet_another_mutable_string = String::from("yet another mutable string");
 
     // mutably_borrowing_a = another_mutable_string; // cant transfer ownership to a variable that points to a borrow reference instead of a string
     // mutably_borrowing_a = &another_mutable_string; // cant immutably borrow to an immutable variable

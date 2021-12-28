@@ -1,22 +1,22 @@
 use std::mem::size_of_val;
 
 pub fn basic_data_types() {
-     integers();
-    // chars();
-    // floats();
-    // booleans();
-    // structs();
-     enums();
-    // unions();
-    // options();
-    // generics();
+    integers();
+    chars();
+    floats();
+    booleans();
+    structs();
+    enums();
+    unions();
+    options();
+    generics();
     string_slices();
     strings();
     println!("everything is declared.")
 }
 
 fn strings() {
-    let mut strings_live_in_the_heap = String::new();
+    let mut strings_live_in_the_heap = String::from("my string live in the heap");
     strings_live_in_the_heap.push('a');
     strings_live_in_the_heap.push_str(" - and i can push a static string slice to this string");
 
@@ -25,7 +25,7 @@ fn strings() {
     let concatenated = another_string + " i want to add this string slice to the string. The first string ownership is moved to this statement and cant be used anymore";
 
     let two_strings_concatenated = strings_live_in_the_heap + &concatenated
-        + " and both strings are moved. Cant be used anymore";
+        + " and both strings ownership are moved. Cant be used anymore";
 
     println!("{:?}",two_strings_concatenated);
 
@@ -86,46 +86,39 @@ fn generics() {
 }
 
 fn booleans() {
-// boolean
-
     let mut boolean: bool;
     boolean = false;
     boolean = true;
 }
 
 fn floats() {
-// floating point
-
     let _float_32bits: f32;
     let _float_64bits: f64;
 }
 
 fn chars() {
-// char types
     let my_char: char = 'x';
-
     println!("how many bytes does a char have? {}bytes", size_of_val(&my_char));
 }
 
 fn integers() {
     static STATIC_NUMBER: i32 = 3; // this will live forever while the program is being executed
 
-
-    let _unsigned_integer_8bits: u8;
-    let _unsigned_integet_16bits: u16;
+    let _unsigned_integer_8bits: u8; // 8 bits unsigned int
+    let _unsigned_integer_16bits: u16;
     let _unsigned_integer_32bits: u32;
     let _unsigned_integer_64bits: u64;
     let _unsigned_integer_128bits: u128;
 
     let _signed_integer_8bits: i8;
     let _signed_integer_16bits: i16;
-    let _signed_integer_32bits: i32;
+    let _signed_integer_32bits: i32; // 32bits signed int
     let _signed_integer_64bits: i64;
     let _signed_integer_128bits: i128;
 
-    let _default_cpu_unsigned: usize;
-    let default_cpu_signed: isize = 12;
-    let another_way_to_declare_variables = 19 as i128;
+    let _default_cpu_unsigned: usize; // unsigned int of the processor bits size
+    let default_cpu_signed: isize = 12; // signed int of the processor bits size
+    let another_way_to_declare_variables = 19 as i128; // simple casting
 
     println!("how many bits does this cpu have? {}bits", size_of_val(&default_cpu_signed) * 8);
 }
@@ -177,7 +170,8 @@ fn enums() {
 }
 
 fn unions() {
-    //////////////// declaring unions
+    // unions are types that can hold any of the types declared
+    // they occupy the same space that the biggest type holds in memory
     union IntOrFloat {
         i : i32,
         f : f32
@@ -205,7 +199,6 @@ fn unions() {
 
 
 fn options() {
-    ///////////////////////// OPTIONS
     fn test_my_option(opt: Option<i32>) {
         match opt {
             Some(3) => println!("Peguei o tres: {} ", opt.unwrap()),
