@@ -30,6 +30,10 @@ pub fn control_flow() {
         if x == 10 { break }
     }
 
+    (1..20).for_each(|_|
+            println!("Really nice way to run a for loop"));
+
+
     for(mypos, x) in (10..21).enumerate() {
         println!("{} : {}", mypos, x)
     }

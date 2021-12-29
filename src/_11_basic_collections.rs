@@ -4,7 +4,7 @@ use std::collections::{HashMap, HashSet};
 use std::ptr::hash;
 
 pub fn collections() {
-    // simple_arrays();
+    simple_arrays();
     // multi_dimensional_arrays();
     // slices();
     // tuples();
