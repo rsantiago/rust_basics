@@ -1,5 +1,8 @@
 use std::io::stdin;
 
+fn main() {
+    exploring_read_line_result();
+}
 pub fn exploring_read_line_result() {
     println!("type a floating number");
     let mut my_var = String::new();

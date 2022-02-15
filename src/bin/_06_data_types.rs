@@ -1,5 +1,8 @@
 use std::mem::size_of_val;
 
+fn main() {
+    basic_data_types();
+}
 pub fn basic_data_types() {
     integers();
     chars();

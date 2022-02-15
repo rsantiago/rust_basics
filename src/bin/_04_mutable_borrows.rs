@@ -1,5 +1,8 @@
 use std::io::stdin;
 
+fn main() {
+    mutable_borrows();
+}
 pub fn mutable_borrows() {
     let mut a_string = String::from("a string");
 

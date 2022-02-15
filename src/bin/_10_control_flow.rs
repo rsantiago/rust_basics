@@ -1,3 +1,6 @@
+fn main() {
+    control_flow();
+}
 pub fn control_flow() {
 
     let ifs_are_expressions_too = if 1 < 5 {

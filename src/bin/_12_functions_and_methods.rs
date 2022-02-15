@@ -1,3 +1,6 @@
+fn main() {
+    functions_and_methods();
+}
 pub fn functions_and_methods() {
     functions();
     methods();
@@ -27,10 +30,12 @@ fn higher_order_functions() {
     println!("Result from these crazy closure filters is: {:?}", my_result);
 }
 
+#[inline(never)] // it will mostly never inline this function
 fn this_function_returns_a_function() -> fn() -> isize {
     || 123
 }
 
+#[inline(always)] // this will inline the function
 fn this_returned_function_receive_ints_and_returns_twice_the_int()
     -> impl Fn(isize) -> isize {
     return |x:isize| { x*2 };

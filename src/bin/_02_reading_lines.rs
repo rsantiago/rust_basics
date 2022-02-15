@@ -1,5 +1,8 @@
 use std::io::stdin;
 
+fn main() {
+    reading_lines();
+}
 pub fn reading_lines() {
     println!("----------------------------------------------");
     println!("-----------how to read lines properly---------");

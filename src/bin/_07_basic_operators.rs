@@ -1,3 +1,6 @@
+fn main() {
+    basic_operators();
+}
 pub fn basic_operators() {
     let mut a = 1+2*8-3/2 ; // all basic operations supported
 

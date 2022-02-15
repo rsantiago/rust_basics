@@ -1,3 +1,6 @@
+fn main() {
+    scope_and_shadowing();
+}
 pub fn scope_and_shadowing() {
     let _a = 1;
     let b = 2;

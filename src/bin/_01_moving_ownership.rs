@@ -1,3 +1,6 @@
+fn main() {
+    moving_ownership();
+}
 
 pub fn moving_ownership() {
     println!("----------------------------------------------");

@@ -3,6 +3,9 @@ use std::collections::btree_map::Entry::Occupied;
 use std::collections::{HashMap, HashSet};
 use std::ptr::hash;
 
+fn main() {
+    collections();
+}
 pub fn collections() {
     simple_arrays();
     // multi_dimensional_arrays();
@@ -14,6 +17,7 @@ pub fn collections() {
 }
 
 fn hashsets() {
+    // see this for hashing performance https://nnethercote.github.io/perf-book/hashing.html
     let mut hashset = HashSet::new();
     hashset.insert("test");
     hashset.insert("another_test");

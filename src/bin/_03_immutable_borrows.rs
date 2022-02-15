@@ -1,4 +1,6 @@
-
+fn main() {
+    immutable_borrows();
+}
 
 pub fn immutable_borrows() {
     println!("----------------------------------------------");
