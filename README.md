@@ -16,23 +16,17 @@ I really enjoyed going through all these learnings, but I must confess that rust
 
 ## How to work with this project
 
-The first thing to notice is that many warnings will be issued by the first time you run this project.
+The first thing to notice is that many warnings will be issued by the first time you run/compile this project.
 
 That is because there are many unused variables. They exist so that one could learn different rust notations.
 
 Another important thing for choosing what to learn is:
 
-The `main.rs` file calls many functions on the different .rs files in the `src` folder.
+The src/bin directory has many files. They are numbered and each one has a main() function.
 
-You should choose which concept to go through, and add/removing comments accordingly, so that the main.rs program can call only the parts that you want to learn.
+You should choose which concept to go through. Just pick a file by name and run it, change it, read it, play with it.
 
-The best way to use this project will be to actually call just one function at a time. 
-
-For example:
-
-In `main.rs`, you could comment all functions, except '`moving_ownership()`'. Therefore, you will execute the ownership concepts part of the code when running `'cargo run'`.
-
-You should always execute a function and read the code, possibly following with a debugger.
+You should always execute a file and read the code, possibly following with a debugger.
 
 ### There are also several code lines that are commented.
 
@@ -40,8 +34,10 @@ This is to remind myself that some ways of writing rust is wrong. Do not remove 
 
 The IDEs I have used to create this project are Intellij and CLion. Any other IDE will be of use, though.
 
-I hope some people could enjoy as much as I did. And really have your mind going crazy around some of rust's concepts regarding memory management.
+I hope some people could enjoy this repo as much as I did. And really have your mind going crazy around some of rust's concepts regarding memory management.
 
 Any improvement is appreciated. Although there are more concepts and tools missing, this project here is actually done. I could create other projects to demonstrate more advanced rust concepts.
 
 Cheers!
+
+PS: I have written a more concise repo just to explain/demonstrate more about ownership/borrowing. Here it is: https://github.com/rsantiago/rust-ownership-samples 
